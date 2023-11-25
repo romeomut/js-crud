@@ -1,0 +1,54 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/purchase-cat/style.scss' as pc;
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: s.space(4);
+    border: 1px solid #CED4DA;
+    border-radius: 12px;
+    padding: s.space(4);
+
+    &__image {
+        width: 150px;
+        height: 200px;
+    }
+
+    &__title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__desc {
+        color: s.color('--light-gray');
+
+        line-height: 23px;
+        overflow: hidden;
+        font-feature-settings: 'clig' off, 'liga' off;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        align-self: stretch;
+    }
+
+    &__block {
+        display: flex;
+    }
+
+    &__button {
+        border-radius: 8px;
+        padding: s.space(4) s.space(8);
+        background-color: s.color('--light-blue');
+        color: s.color('--white');
+        text-decoration: none;
+    }
+
+    &__button:hover {
+        opacity: 0.7;
+    }
+
+}

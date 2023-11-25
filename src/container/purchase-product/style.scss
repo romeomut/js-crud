@@ -1,0 +1,46 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as h;
+@use '../../component/purchase-product/style.scss' as pp;
+@use '../../component/divider/style.scss' as d;
+@use '../../component/elofform/style.scss' as ef;
+
+.product-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: s.space(4);
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        padding: s.space(4);
+    }
+
+    &__image-img {
+        width: 300px;
+        height: 400px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: s.space(7);
+    }
+
+    &__title {
+        color: s.color('--light-blue');
+        font-size: 28px;
+        line-height: 120%;
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: s.space(12) s.space(5);
+}

@@ -1,0 +1,15 @@
+.product-card__category {
+  border-radius: 80px;
+  padding: 8px 16px;
+  align-self: start;
+}
+.product-card__category--1 {
+  border: 1px #008000 solid;
+  color: #008000;
+}
+.product-card__category--2 {
+  border: 1px #0050FF solid;
+  color: #0050FF;
+}
+
+/*# sourceMappingURL=style.css.map */

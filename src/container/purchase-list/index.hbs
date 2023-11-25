@@ -1,0 +1,41 @@
+<main>
+    {{> heading}}
+
+    <div class="purchase-list">
+        {{#each data}}
+        {{#with this}}
+
+        <div class="purchase-list__row">
+            <a href="/purchase-info?id={{id}}" class="purchase-list__link">
+                <div class="purchase-list__value text--grey">ID: {{id}}</div>
+            </a>
+            <div class="purchase-list__col">
+                <div class="purchase-list--title text--grey">Товар</div>
+                <a href="/purchase-info?id={{id}}" class="purchase-list__link">
+                    <div class="purchase-list--value">{{this.product.title}}</div>
+                </a>
+            </div>
+            <div class="purchase-list__col">
+                <div class="purchase-list--title text--grey">Сума замовлення</div>
+                <a href="/purchase-info?id={{id}}" class="purchase-list__link">
+                    <div class="purchase-list--value">{{totalPrice}}₴</div>
+                </a>
+            </div>
+            <div class="purchase-list__col">
+                <div class="purchase-list--title text--grey">Нараховані бонуси</div>
+                <a href="/purchase-info?id={{id}}" class="purchase-list__link">
+                    <div class="purchase-list--value">{{accrualBonus}}₴</div>
+                </a>
+            </div>
+        </div>
+
+        {{/with}}
+
+        {{#if @last}}
+        {{else}}
+        {{> divider}}
+        {{/if}}
+
+        {{/each}}
+    </div>
+</main>

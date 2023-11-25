@@ -1,0 +1,24 @@
+<div class="form__field">
+    {{#with data}}
+
+    {{!-- input start --}}
+    {{#if input}}
+
+    {{#with input.[0]}}
+    <label for="{{name}}" class="form{{class}}">{{label}}</label>
+    {{/with}}
+    {{#with input.[1]}}
+    <input type="{{type}}" name="{{name}}" value="{{value}}" class="form{{class}}">
+    {{/with}}
+
+    {{/if}}
+    {{!-- input end --}}
+
+    {{!-- button start --}}
+    {{#if button}}
+    <button class="form{{button.class}}">{{button.title}}</button>
+    {{/if}}
+    {{!-- button end --}}
+
+    {{/with}}
+</div>

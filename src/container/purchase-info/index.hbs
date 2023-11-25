@@ -1,0 +1,46 @@
+<main>
+    <div class="form">
+        {{> heading}}
+
+        {{#with data}}
+        <form action="/purchase-update?id={{id}}" method="post">
+
+            <div class="form__content">
+
+                {{> elform input=true name='id' label='ID' value=id type='text' readonly=true}}
+
+                {{> divider}}
+
+                <div class="form__block">
+                    {{> elform input=true label="Ім'я:" value=firstname type='text' readonly=true}}
+                    {{> elform input=true label="Прізвище:" value=lastname type='text' readonly=true}}
+                    {{> elform input=true label="Телефон:" value=phone type='tel' readonly=true}}
+                    {{> elform input=true label="Електронна пошта:" value=email type='email' readonly=true}}
+                </div>
+
+                {{> divider}}
+
+                {{> elform input=true label="Назва товару:" value=product.title type='text' readonly=true}}
+
+                {{> elform input=true label="Коментар:" value=comment type='text' readonly=true}}
+
+                {{> divider}}
+
+                <div class="form__block">
+                    {{> elform input=true label="Вартість товарів:" value=productPrice type='number' readonly=true}}
+                    {{> elform input=true label="Вартість доставки:" value=deliveryPrice type='number' readonly=true}}
+                    {{> elform input=true label="Сума до сплати:" value=totalPrice type='number' readonly=true}}
+                    {{> elform input=true label="Нараховані бонуси:" value=accrualBonus type='number' readonly=true}}
+                </div>
+
+                {{> divider}}
+
+                {{> elform button=true title='Змінити дані'}}
+
+            </div>
+
+        </form>
+        {{/with}}
+
+    </div>
+</main>
