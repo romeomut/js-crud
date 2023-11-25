@@ -1,0 +1,9 @@
+{{#each list}}
+<div class="product-card">
+    <img src="{{img}}" alt="{{title}}" class="product-card__image">
+    <h2 class="product-card__title">{{title}}</h2>
+    <p class="product-card__desc">{{description}}</p>
+    {{> purchase-cat data=category}}
+    <a href="/purchase-product?id={{id}}" class="product-card__button">Купити зараз {{price}}₴</a>
+</div>
+{{/each}}

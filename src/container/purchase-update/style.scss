@@ -1,0 +1,59 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as h;
+@use '../../component/divider/style.scss' as d;
+
+.heading {
+    padding: 0;
+}
+
+.form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: s.space(4);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: s.space(4);
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(2);
+    }
+
+    &__label {
+        font-size: 14px;
+    }
+
+    &__input {
+        border: 1px solid s.color('--light');
+        padding: s.space(0) s.space(1);
+        border-radius: 4px;
+        padding: s.space(2) s.space(4);
+    }
+
+    &__button {
+        border: 1px solid s.color('--light');
+        padding: s.space(2);
+        border-radius: 5px;
+        background-color: s.color('--light-blue');
+        color: s.color('--white');
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: s.space(4);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(5);
+    }
+
+    &__input--readonly {
+        border: 0;
+        padding: 0;
+    }
+
+}

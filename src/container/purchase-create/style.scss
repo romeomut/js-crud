@@ -1,0 +1,40 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as h;
+@use '../../component/elform/style.scss' as ef;
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+}
+
+.heading {
+    padding: 0;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(5);
+    font-size: 16px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.form {
+    margin-top: s.space(4);
+    display: flex;
+    flex-direction: column;
+    border-radius: s.space(4);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: s.space(4);
+    gap: s.space(5);
+
+    &__content {
+        display: grid;
+        gap: s.space(4);
+    }
+}

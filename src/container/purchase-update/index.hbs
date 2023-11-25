@@ -1,0 +1,27 @@
+<main>
+    <div class="form">
+        {{> heading}}
+
+        {{#with data}}
+        <form action="/purchase-save?id={{id}}" method="post">
+
+            <div class="form__content">
+
+                {{> elform input=true name='id' label='ID' value=id type='text' readonly=true}}
+
+                <div class="form__block">
+                    {{> elform input=true name='lastname' label="Прізвище:" value=lastname type='text'}}
+                    {{> elform input=true name='firstname' label="Ім'я:" value=firstname type='text'}}
+                    {{> elform input=true name='email' label="Електронна пошта:" value=email type='email'}}
+                    {{> elform input=true name='phone' label="Телефон:" value=phone type='tel'}}
+                </div>
+
+                {{> elform button=true title='Зберегти зміни'}}
+
+            </div>
+
+        </form>
+        {{/with}}
+
+    </div>
+</main>

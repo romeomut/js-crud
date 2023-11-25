@@ -1,0 +1,37 @@
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__label {
+  font-size: 14px;
+}
+.form__input {
+  border: 1px solid #ddd;
+  padding: 8px 28px;
+  border-radius: 4px;
+}
+.form__button {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #0050FF;
+  color: #fff;
+}
+.form__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.simple_font {
+  font-size: 12px;
+  color: #b1aeae;
+}
+
+.field--disabled {
+  position: absolute;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

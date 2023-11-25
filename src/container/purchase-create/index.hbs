@@ -1,0 +1,47 @@
+<main>
+  <div class="form">
+    {{> heading}}
+
+    <ul class="cart">
+      {{#each data.cart}}
+      <li class="cart__item">
+        <span>{{text}}</span>
+        <span>{{price}}₴</span>
+      </li>
+      {{/each}}
+    </ul>
+
+    {{> heading st=true}}
+
+    <form action="/purchase-submit?id={{data.id}}" method="post">
+
+      <div class="form__content">
+
+        <div class="form__block">
+          {{> elform input=true name='lastname' label='Прізвище' type='text'}}
+          {{> elform input=true name='firstname' label="Ім'я" type='text'}}
+          {{> elform input=true name='phone' label="Мобільний телефон" type='tel'}}
+          {{> elform input=true name='email' label="Електронна пошта" type='email'}}
+        </div>
+
+        {{> elform textarea=true name='comment' label='Коментар' commentinfo='Коментар буде передано кур’єру'}}
+
+        <div class="form__block">
+          {{> elform input=true name='bonus' label='Списати бонуси' type='number'}}
+          {{> elform input=true name='promocode' label="Промо-код" type='text'}}
+        </div>
+
+        {{> elform input=true name='totalPrice' value=data.totalPrice type='number' disabled=true}}
+        {{> elform input=true name='productPrice' value=data.productPrice type='number' disabled=true}}
+        {{> elform input=true name='deliveryPrice' value=data.deliveryPrice type='number' disabled=true}}
+        {{> elform input=true name='amount' value=data.amount type='number' disabled=true}}
+        {{> elform input=true name='accrualBonus' value=data.bonus type='number' disabled=true}}
+
+        <div>Вього: {{data.totalPrice}}₴ (+{{data.bonus}}₴ на бонусний рахунок)</div>
+
+        {{> elform button=true title='Оформити замовлення'}}
+
+      </div>
+    </form>
+  </div>
+</main>
