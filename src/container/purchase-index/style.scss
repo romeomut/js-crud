@@ -1,0 +1,37 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as h;
+@use '../../component/purchase-product/style.scss' as pp;
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: s.space(12) s.space(5);
+}
+
+
+// .list__menu {
+//     padding: 12px;
+// }
+
+// .list__menu li {
+//     margin-top: 4px;
+// }
+
+// .item__menu {
+//     display: block;
+//     border: 1px solid #ccc;
+//     border-radius: 10px;
+//     padding: 12px;
+//     width: 200px;
+//     text-decoration: none;
+//     font-size: 20px;
+//     color: #fff;
+// }
+
+// .item__menu:hover {
+//     opacity: 0.7;
+// }
+
+// .color-blue {
+//     background-color: s.color('--blue');
+// }

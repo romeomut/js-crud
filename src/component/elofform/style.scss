@@ -1,0 +1,39 @@
+@use '../../lib/service.scss' as s;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(8);
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(2);
+    }
+
+    &__label {
+        font-size: 14px;
+    }
+
+    &__input {
+        border: 1px solid s.color('--light');
+        padding: s.space(2) s.space(7);
+        border-radius: 4px;
+    }
+
+    &__button {
+        border: 1px solid s.color('--light');
+        padding: s.space(2);
+        border-radius: 5px;
+        background-color: s.color('--light-blue');
+        color: s.color('--white');
+    }
+
+    // &__block {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     gap: s.space(4);
+
+    // }
+
+}

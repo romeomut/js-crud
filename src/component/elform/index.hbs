@@ -1,0 +1,27 @@
+{{!-- input end --}}
+{{#if input}}
+<div class="form__field {{#if disabled}}field--disabled{{/if}}">
+    <label for="{{name}}" class="form__label">{{label}}</label>
+    <input type="{{type}}" {{#if name}}name="{{name}}" {{/if}} {{#if value}} value="{{value}}"
+        {{/if}}class="form__input {{#if readonly}}form__input--readonly{{/if}}" {{#if readonly}}readonly{{/if}}>
+</div>
+{{/if}}
+{{!-- input end --}}
+
+{{!-- textarea end --}}
+{{#if textarea}}
+<div class="form__field">
+    <label for="comment" class="form__label">Короткий опис товару</label>
+    <textarea name="comment" rows="2" class="form__input"></textarea>
+    {{#if commentinfo}}<span class="simple_font">{{commentinfo}}</span>{{/if}}
+</div>
+{{/if}}
+{{!-- textarea end --}}
+
+{{!-- button start --}}
+{{#if button}}
+<div class="form__field">
+    <button class="form__button">{{title}}</button>
+</div>
+{{/if}}
+{{!-- button end --}}

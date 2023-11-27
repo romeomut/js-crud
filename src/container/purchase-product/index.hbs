@@ -1,0 +1,23 @@
+<main>
+    <div class="product-info">
+        <div class="product-info__image">
+            <img src="{{data.product.img}}" alt="{{data.product.title}}" class="product-info__image-img">
+        </div>
+        <div class="product-info__info">
+            <h3 class="product-info__title">{{data.product.title}}</h3>
+            {{>divider}}
+            <p class="product-info__desc">{{data.product.description}}</p>
+            {{>divider}}
+            {{> purchase-cat data=data.product.category}}
+            <div class="form">
+                <form action="/purchase-create?id={{data.product.id}}" method="post">
+                    {{> elofform data=elofform}}
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>heading}}
+    <div class="product-list">
+        {{> purchase-product list=data.list}}
+    </div>
+</main>

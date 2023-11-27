@@ -1,0 +1,20 @@
+@use '../../lib/service.scss' as s;
+
+.product-card {
+    &__category {
+        border-radius: 80px;
+        padding: s.space(2) s.space(4);
+        align-self: start;
+    }
+
+    &__category--1 {
+        border: 1px s.color('--green') solid;
+        color: s.color('--green');
+    }
+
+    &__category--2 {
+        border: 1px s.color('--light-blue') solid;
+        color: s.color('--light-blue');
+    }
+
+}
